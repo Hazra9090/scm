@@ -1,6 +1,15 @@
+:root {
+  --font-family-primary: $base-font-family;
+  --font-family-secondary: 'ClashGrotesk', sans-serif;
+}
+
 // font family
 .font-family-primary {
-  font-family: $base-font-family;
+  font-family: var(--font-family-primary);
+}
+
+.font-family-secondary {
+  font-family: var(--font-family-secondary);
 }
 
 // Font-title
@@ -9,6 +18,7 @@
   font-size: 16px;
   color: var(--primary);
   line-height: 1.1;
+  font-family: var(--font-family-secondary);
 }
 
 .font-title-sm {
@@ -16,6 +26,7 @@
   font-size: 20px;
   color: var(--primary);
   line-height: 1.1;
+  font-family: var(--font-family-secondary);
 }
 
 .font-title-normal {
@@ -23,6 +34,7 @@
   font-size: 24px;
   color: var(--primary);
   line-height: 1.1;
+  font-family: var(--font-family-secondary);
 }
 
 .font-title-md {
@@ -30,6 +42,7 @@
   font-size: 34px;
   color: var(--primary);
   line-height: 1.1;
+  font-family: var(--font-family-secondary);
 }
 
 .font-title-large {
@@ -37,6 +50,7 @@
   font-size: 44px;
   color: var(--primary);
   line-height: 1.1;
+  font-family: var(--font-family-secondary);
 }
 
 .font-title-xl {
@@ -44,6 +58,7 @@
   font-size: 64px;
   color: var(--primary);
   line-height: 1.1;
+  font-family: var(--font-family-secondary);
 }
 
 .font-title-xxl {
@@ -51,6 +66,7 @@
   font-size: 95px;
   color: var(--primary);
   line-height: 1.1;
+  font-family: var(--font-family-secondary);
 }
 
 
@@ -73,28 +89,28 @@
 .font-body-normal {
   font-weight: 400;
   font-size: 18px;
-  color: var(--text-primary);
+  color: var(--primary);
   line-height: 1.5;
 }
 
 .font-body-md {
   font-weight: 500;
   font-size: 20px;
-  color: var(--text-primary);
+  color: var(--primary);
   line-height: 1.5;
 }
 
 .font-body-large {
   font-weight: 500;
   font-size: 24px;
-  color: var(--text-primary);
+  color: var(--primary);
   line-height: 1.5;
 }
 
 .font-body-xl {
   font-weight: 500;
   font-size: 39px;
-  color: var(--text-primary);
+  color: var(--primary);
   line-height: 1.5;
 }
 
