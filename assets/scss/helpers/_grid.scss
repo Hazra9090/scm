@@ -1,0 +1,13 @@
+.container {
+  max-width: 1400px;
+  padding: 0 rem(58);
+  margin: 0 auto;
+
+  @include mq(tablet) {
+    padding: 0 rem(30);
+  }
+
+  @include mq(phone) {
+    padding: 0 rem(16);
+  }
+}
