@@ -1,0 +1,11 @@
+:root {
+  --header-height: 50;
+}
+
+header {
+  height: rem(var(--header-height)); // Outputs: height: calc(var(--header-height) / 16 * 1rem);
+}
+
+footer {
+  height: rem(32); // Outputs: height: 2rem;
+}
