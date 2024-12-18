@@ -9,7 +9,7 @@
   .owl-nav {
     margin-left: auto;
     display: flex;
-    gap: 20px;
+    gap: 12px;
     width: fit-content;
 
     @include mq(tablet) {
@@ -32,12 +32,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 52px;
-        height: 52px;
+        width: 43px;
+        height: 43px;
         // border: 1px solid #007cc2;
-        background-color: #ffffff;
+        background-color: var(--text-blue-dark);
         border-radius: 50%;
-        background-image: url('data:image/svg+xml,%3Csvg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="52" height="52" rx="26" fill="white"/%3E%3Cpath d="M32.4609 25.7708H19.9609" stroke="%23002B47" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/%3E%3Cpath d="M27.4219 20.7521L32.4635 25.7721L27.4219 30.793" stroke="%23002B47" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E');
+        background-image: url("data:image/svg+xml,%3Csvg width='43' height='43' viewBox='0 0 43 43' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='43' height='43' rx='21.5' fill='%23213643'/%3E%3Cpath d='M27.9585 21.2708H15.4585' stroke='%23f7fafd' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M22.917 16.2482L27.9587 21.2682L22.917 26.2891' stroke='%23f7fafd' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
         background-repeat: no-repeat !important;
         background-size: contain;
         background-position: center !important;
@@ -126,14 +126,6 @@
     .owl-next {
       position: absolute;
       top: calc(50% - 40px / 2);
-    }
-
-    .owl-prev {
-      left: 20px;
-    }
-
-    .owl-next {
-      right: 20px;
     }
   }
 

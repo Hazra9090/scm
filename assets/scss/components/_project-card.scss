@@ -1,0 +1,37 @@
+.project-card {
+  padding: rem(40);
+  background: var(--text-light-grey);
+
+  .supergas-logo {
+    max-width: 175px;
+  }
+
+  .project-desc {
+    color: var(--text-darkest-blue);
+  }
+
+  .arrow {
+    max-width: rem(32);
+    min-width: rem(32);
+  }
+
+  .success-card {
+    border-bottom: 1px solid var(--border-primary);
+  }
+
+
+  .list-svg {
+    max-width: 32px;
+    min-width: 32px;
+    background: var(--white);
+    padding: rem(6);
+    border-radius: 50%;
+  }
+
+  .list {
+    padding: rem(8) rem(12);
+    background: var(--white);
+    border-radius: 100px;
+    width: fit-content;
+  }
+}

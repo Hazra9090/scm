@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $("#story-card-wrapper").owlCarousel({
+  $("#project-card-wrapper").owlCarousel({
     loop: false,
     margin: 16,
     nav: true,
@@ -13,15 +13,15 @@ $(document).ready(function () {
         stagePadding: 40,
       },
       568: {
-        items: 2,
+        items: 1,
         stagePadding: 40,
       },
       768: {
         stagePadding: 80,
-        items: 2,
+        items: 1,
       },
       991: {
-        items: 2,
+        items: 1,
         stagePadding: 180,
       },
       1240: {
@@ -29,10 +29,10 @@ $(document).ready(function () {
       },
       1600: {
         stagePadding: 200,
-        items: 3,
+        items: 1,
       },
       1900: {
-        items: 5,
+        items: 1,
       }
     },
   });
