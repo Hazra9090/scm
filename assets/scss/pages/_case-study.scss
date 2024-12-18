@@ -1,9 +1,10 @@
 .case-study {
   padding-top: 88px;
-  background: var(--bg-primary);
+
 
   .success-sec {
     padding: 88px 0 104px 0;
+    background: var(--bg-primary);
   }
 
   .success-sub-title-wrap {
@@ -114,6 +115,15 @@
     .arrow {
       max-width: rem(16);
       min-width: rem(16);
+    }
+  }
+
+  .connect-sec {
+    padding: 104px 0;
+    background: var(--bg-primary);
+
+    .connect-title {
+      max-width: 980px;
     }
   }
 }
