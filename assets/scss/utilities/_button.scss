@@ -1,35 +1,59 @@
+// Define CSS variables for easier theme management
+:root {
+	--btn-bg-color: var(--secondary);
+	--btn-font-color: white;
+	--btn-font-size: 16px;
+	--btn-font-weight: 500;
+	--btn-padding: 16px 20px;
+	--btn-border: transparent;
+	--btn-text-margin-right: 6px;
+	--btn-icon-width: 16px;
+	--btn-text-translate-x: 20px;
+	--btn-icon-translate-x: -85px;
+	--transition-duration-short: 0.3s;
+	--transition-duration-long: 0.8s;
+}
+
 .btn {
 	display: inline-flex;
 	align-items: center;
-	background-color: var(--secondary);
-	color: white;
-	padding: 10px 20px;
-	border: none;
+	border: var(--btn-border);
 	cursor: pointer;
 	text-decoration: none;
-	transition: transform 0.3s ease;
+	background: transparent;
+	border-radius: 6px;
+	transition: transform var(--transition-duration-short) ease;
+	font-family: $base-font-family;
+
+	&-primary {
+		background-color: var(--btn-bg-color);
+		color: var(--btn-font-color);
+		padding: var(--btn-padding);
+		font-size: var(--btn-font-size);
+		font-weight: var(--btn-font-weight);
+
+		&:hover {
+			.btn-text {
+				transform: translateX(var(--btn-text-translate-x));
+			}
+
+			.btn-icon {
+				transform: translateX(var(--btn-icon-translate-x));
+			}
+		}
+	}
 
 	&-text {
-		margin-right: 10px;
-		transition: transform 0.8s ease;
+		margin-right: var(--btn-text-margin-right);
+		transition: transform var(--transition-duration-long) ease;
 	}
 
 	&-icon {
-		transition: transform 0.8s ease;
+		transition: transform var(--transition-duration-long) ease;
 
 		img {
-			width: 24px;
+			width: var(--btn-icon-width);
 			height: auto;
-		}
-	}
-
-	&:hover {
-		.btn-text {
-			transform: translateX(30px);
-		}
-
-		.btn-icon {
-			transform: translateX(-60px);
 		}
 	}
 }
