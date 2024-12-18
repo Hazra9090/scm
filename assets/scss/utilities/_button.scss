@@ -1,171 +1,35 @@
 .btn {
-	--btn-font-size: 16px;
-	--btn-font-weight: 500;
-
-	--btn-bg-clr: '';
-	--btn-font-clr: '';
-	--btn-border-clr: '';
-	--btn-elem-icon-bg-clr: '';
-	--btn-elem-icon-size: 16;
-	// --btn-resp-elem-icon-size: 30px;
-	--btn-padding: 16px 24px;
-	--btn-border-radius: 6px;
-
-	--btn-layer-transition-display: block;
-	--btn-elem-icon-linear: translateX(-10px);
-	--btn-linear: translateX(10px);
-	--btn-padding-sm: 8px 8px 8px 24px;
-	--btn-elem-icon-size-sm: 36px;
-	--btn-padding-right: 12px;
-	--btn-elem-icon-position-right: var(--btn-padding-right);
-
-	// states
-	--btn-hover-bg-clr: '';
-	--btn-hover-font-clr: '';
-	--btn-hover-border-clr: '';
-
-	// responsive
-	--btn-resp-font-size-xs: 14px;
-	// --btn-resp-padding-xs: 9px 9px 9px 18px;
-	// --padding-right-xs: 9px;
-
-	position: relative;
 	display: inline-flex;
-	justify-content: center;
-	column-gap: 6px;
 	align-items: center;
-	background-color: var(--btn-bg-clr);
-	font-size: var(--btn-font-size);
-	font-weight: var(--btn-font-weight);
-	color: var(--btn-font-clr);
-	width: fit-content;
-	padding: var(--btn-padding);
-	border: 1px solid var(--btn-border-clr);
-	border-radius: var(--btn-border-radius);
-	overflow: hidden;
-	transition: all 0.5s ease-in-out;
-	z-index: 1;
+	background-color: var(--secondary);
+	color: white;
+	padding: 10px 20px;
+	border: none;
 	cursor: pointer;
+	text-decoration: none;
+	transition: transform 0.3s ease;
 
-	&::before {
-		content: "";
-		position: absolute;
-		display: var(--btn-layer-transition-display);
-		width: var(--btn-elem-icon-size);
-		aspect-ratio: 1;
-		background-color: var(--btn-elem-icon-bg-clr);
-		// border: 1px solid var(--btn-border-clr);
-		border-radius: var(--btn-border-radius);
-		transition: all .4s ease-in-out;
-		// right: var(--btn-elem-icon-position-right);
-		pointer-events: none;
-		z-index: -1;
-
-		// @include mq(phone) {
-		// 	--btn-elem-icon-size: var(--btn-resp-elem-icon-size);
-		// }
-	}
-
-	&-elem-icon {
-		position: relative;
-		display: grid;
-		place-items: center;
-		min-width: var(--btn-elem-icon-size);
-		aspect-ratio: 1;
-		// border-radius: 50%;
-		transition: all 0.3s ease-in-out;
-
-		// @include mq(phone) {
-		// 	--btn-elem-icon-size: var(--btn-resp-elem-icon-size);
-		// }
-
-	}
-
-	// .btn-elem-icon {
-	// 	img {
-	// 		@include mq(phone) {
-	// 			width: 18px !important;
-	// 		}
-	// 	}
-	// }
-
-	&-sm {
-		--btn-padding: var(--btn-padding-sm);
-		--btn-elem-icon-size: var(--btn-elem-icon-size-sm);
-		--btn-padding-right: var(--padding-right-xs);
-	}
-
-	&:hover {
-		background-color: var(--btn-hover-bg-clr);
-		color: var(--btn-hover-font-clr);
-		border-color: var(--btn-hover-border-clr);
-
-		&::before {
-			width: calc(100% + 0px);
-			right: 0;
-			aspect-ratio: 1 / .5;
-		}
-
-		.btn-elem-icon {
-			transform: var(--btn-elem-icon-rotation);
-		}
-	}
-
-	@include mq(phone) {
-		--btn-padding: var(--btn-resp-padding-xs);
-		--btn-font-size: var(--btn-resp-font-size-xs);
-		--btn-padding-right: var(--padding-right-xs);
-	}
-
-	&-primary {
-		--btn-bg-clr: var(--secondary);
-		--btn-font-clr: var(--text-tertiary-dark);
-
-		// --btn-border-clr: var(--primary);
-		// --btn-elem-icon-bg-clr: var(--primary);
-		// --btn-hover-font-clr: var(--white);
-		// --btn-hover-border-clr: var(--primary);
-		&:hover {
-			transform: var(--btn-linear);
-		}
-	}
-
-	&-secondary {
-		--btn-font-clr: var(--white);
-		--btn-border-clr: var(--white);
-		--btn-elem-icon-bg-clr: var(--white);
-		--btn-hover-font-clr: var(--primary);
-		--btn-hover-border-clr: var(--white);
+	&-text {
+		margin-right: 10px;
+		transition: transform 0.8s ease;
 	}
 
 	&-icon {
-		--btn-layer-transition-display: none;
-		padding: 0;
-		border: 0;
+		transition: transform 0.8s ease;
 
-		&-primary {
-			--btn-bg-clr: var(--primary);
-
-			&:hover {
-				background-color: var(--primary);
-			}
-		}
-
-		&-secondary {
-			--btn-bg-clr: var(--white);
-
-			&:hover {
-				background-color: var(--white);
-			}
-
+		img {
+			width: 24px;
+			height: auto;
 		}
 	}
 
-	// &-icon-emergency {
-	// 	--btn-bg-clr: #F0D2DD;
-	// 	--btn-border-clr: #E0BAC8;
-	// 	--btn-elem-icon-bg-clr: var(--btn-bg-clr);
-	// 	--btn-elem-icon-size: 52px;
-	// 	--btn-elem-icon-rotation: translateX(-10px);
-	// }
+	&:hover {
+		.btn-text {
+			transform: translateX(30px);
+		}
+
+		.btn-icon {
+			transform: translateX(-60px);
+		}
+	}
 }
