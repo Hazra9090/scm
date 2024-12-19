@@ -18,6 +18,10 @@
 
   .success-description {
     max-width: 864px;
+
+    @include mq(desktop-sm) {
+      padding-right: 13%;
+    }
   }
 
   .case-study-sec {
