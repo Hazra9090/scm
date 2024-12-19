@@ -10,7 +10,7 @@
     margin-left: auto;
     display: flex;
     gap: 12px;
-    width: fit-content;
+    // width: fit-content;
 
     @include mq(tablet) {
       gap: 8px;
@@ -44,8 +44,8 @@
         font-size: 0;
 
         @include mq(tablet) {
-          width: 30px;
-          height: 30px;
+          width: 32px;
+          height: 32px;
         }
 
         &:hover {
@@ -71,49 +71,55 @@
     gap: rem(8);
 
     .owl-dot {
+      position: relative;
+      display: inline-block;
+
       span {
         display: block;
-        min-width: 8px;
-        max-width: 8px;
-        min-height: 8px;
-        max-height: 8px;
-        border-radius: 20px;
-        background: rgba(255, 255, 255, 0.21);
+        min-width: 10px;
+        max-width: 10px;
+        min-height: 10px;
+        max-height: 10px;
+        border-radius: 50%; // Use 50% for perfect circles
+        background: #05070833;
         transition: all .35s;
       }
 
       &:hover {
         span {
           transition: all .35s;
-          background: #F45656;
+          background: var(--secondary);
         }
       }
 
       &.active {
-        svg {
-          fill: #fff;
-        }
-
         span {
-          background: #fff;
+          background: var(--secondary);
         }
+      }
+
+      &.small-dot span {
+        width: 8px;
+        height: 8px;
       }
     }
   }
-
-  // &.nav-light {
-  // 	.owl-nav {
-  // 		.owl-prev,
-  // 		.owl-next {
-  // 			span {
-  // 				background-color: rgba(255, 255, 255, 0.8);
-  // 				border-color: rgba(255, 255, 255, 0.8);
-  // 			}
-  // 		}
-  // 	}
-  // }
-
 }
+
+
+// &.nav-light {
+// 	.owl-nav {
+// 		.owl-prev,
+// 		.owl-next {
+// 			span {
+// 				background-color: rgba(255, 255, 255, 0.8);
+// 				border-color: rgba(255, 255, 255, 0.8);
+// 			}
+// 		}
+// 	}
+// }
+
+
 
 // nav control show on hover
 .nav-on-hover {

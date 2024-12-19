@@ -52,4 +52,12 @@
   position: absolute;
   top: -55px;
   right: 56px;
+
+  @include mq(phone) {
+    top: unset;
+    right: unset;
+    bottom: -62px;
+    justify-content: center;
+    width: 100%;
+  }
 }

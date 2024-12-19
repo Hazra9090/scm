@@ -54,25 +54,25 @@
         </div>
         <div class="project-card-wrapper owl-carousel " id="project-card-wrapper">
           <div class="item">
-            <div class="project-card-wrap">
+            <div class="project-card-wrap d-flex column-gap-8">
               <div class="project-card">
-                <img class="supergas-logo pb-40" src="assets/images/svg/supergas-logo.svg">
+                <img class="supergas-logo" src="assets/images/svg/supergas-logo.svg">
                 <h3 class="font-title-md pb-12">Project marvel</h3>
                 <p class="project-desc font-body-sm">Customer success story implemented by SCM YUGA at DHL</p>
                 <div class="project-rate">
-                  <div class="success-card pt-32">
+                  <div class="success-card">
                     <div class="d-flex column-gap-8 align-items-end">
                       <h4 class="font-title-xl">40%</h4>
-                      <img class="arrow pb-8" src="assets/images/svg/arrow-up.svg">
+                      <img class="arrow" src="assets/images/svg/arrow-up.svg">
                     </div>
-                    <p class="font-body-normal pt-15 pb-24">Order execution</p>
+                    <p class="success-order font-body-normal">Order execution</p>
                   </div>
-                  <div class="failure-card pt-24">
+                  <div class="failure-card ">
                     <div class="d-flex column-gap-8 align-items-end">
                       <h4 class="font-title-xl">05%</h4>
-                      <img class="arrow pb-8" src="assets/images/svg/arrow-down.svg">
+                      <img class="arrow" src="assets/images/svg/arrow-down.svg">
                     </div>
-                    <p class="font-body-normal pt-15">Order execution</p>
+                    <p class="success-order font-body-normal">Order execution</p>
                   </div>
                 </div>
                 <div class="list-type d-flex column-gap-10 align-items-center pt-58 pb-20">
@@ -80,116 +80,260 @@
                   <h4 class="font-title-sm ">Type</h4>
                 </div>
                 <div class="lists">
-                  <ul class="list-items d-flex column-gap-12">
+                  <ul class="list-items d-flex flex-wrap column-gap-12">
                     <li class="list font-body-xs">Industry</li>
                     <li class="list font-body-xs">Transportation</li>
                     <li class="list font-body-xs">Supply chain</li>
                   </ul>
                 </div>
               </div>
+              <div class="project-card-video" onclick="toggleVideo(event)">
+                <img class="video-img" src="assets/images/png/supergas-video-img.png" alt="Supergas" id="playBtn">
+                <div class="play-btn d-flex column-gap-12 align-items-center">
+                  <img class="play-svg" src="assets/images/svg/play.svg" alt="Play">
+                  <h4 class="font-body-sm font-weight-500 font-color-white">Play</h4>
+                </div>
+                <video id="project-video" class="project-video" data-video="1" controls loop>
+                  <source src="assets/videos/video-demo.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </div>
           </div>
           <div class="item">
-            <!-- <div class="story-card fade-up">
-              <div class="doctor-card">
-                <div class="doctor-image">
-                  <img src="assets/images/png/doc-1.png" alt="Dr. Aadhya Kabir">
+            <div class="project-card-wrap d-flex column-gap-8">
+              <div class="project-card">
+                <img class="supergas-logo" src="assets/images/svg/supergas-logo.svg">
+                <h3 class="font-title-md pb-12">Project marvel</h3>
+                <p class="project-desc font-body-sm">Customer success story implemented by SCM YUGA at DHL</p>
+                <div class="project-rate">
+                  <div class="success-card">
+                    <div class="d-flex column-gap-8 align-items-end">
+                      <h4 class="font-title-xl">40%</h4>
+                      <img class="arrow" src="assets/images/svg/arrow-up.svg">
+                    </div>
+                    <p class="success-order font-body-normal">Order execution</p>
+                  </div>
+                  <div class="failure-card ">
+                    <div class="d-flex column-gap-8 align-items-end">
+                      <h4 class="font-title-xl">05%</h4>
+                      <img class="arrow" src="assets/images/svg/arrow-down.svg">
+                    </div>
+                    <p class="success-order font-body-normal">Order execution</p>
+                  </div>
                 </div>
-                <div class="doctor-info">
-                  <h2 class="doctor-name font-title-xs font-color-white">Dr. Darshan Kumar</h2>
-                  <p class="qualifications font-body-sm">BPT, MPT</p>
-                  <p class="speciality font-body-md fw-normal asten-pt-12">Specialties: <span
-                      class="font-body-md fw-normal">Robotic
-                      Knee
-                      Surgery, External
-                      fixation</span></p>
-
-                  <button class="btn btn-secondary btn-sm asten-mt-32">Book now<span class="btn-elem-icon"> <img
-                        class="btn-elem-icon-img" src="./assets/images/svg/arrow-right-angle.svg"></span></button>
-
+                <div class="list-type d-flex column-gap-10 align-items-center pt-58 pb-20">
+                  <div class="list-img"><img class="list-svg" src="assets/images/svg/list.svg"></div>
+                  <h4 class="font-title-sm ">Type</h4>
+                </div>
+                <div class="lists">
+                  <ul class="list-items d-flex flex-wrap column-gap-12">
+                    <li class="list font-body-xs">Industry</li>
+                    <li class="list font-body-xs">Transportation</li>
+                    <li class="list font-body-xs">Supply chain</li>
+                  </ul>
                 </div>
               </div>
-            </div> -->
+              <div class="project-card-video" onclick="toggleVideo(event)">
+                <img class="video-img" src="assets/images/png/supergas-video-img.png" alt="Supergas" id="playBtn">
+                <div class="play-btn d-flex column-gap-12 align-items-center">
+                  <img class="play-svg" src="assets/images/svg/play.svg" alt="Play">
+                  <h4 class="font-body-sm font-weight-500 font-color-white">Play</h4>
+                </div>
+                <video id="project-video" class="project-video" data-video="1" controls loop>
+                  <source src="assets/videos/video-demo.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
           </div>
           <div class="item">
-            <!-- <div class="story-card fade-up">
-              <div class="doctor-card">
-                <div class="doctor-image">
-                  <img src="assets/images/png/doc-1.png" alt="Dr. Aadhya Kabir">
+            <div class="project-card-wrap d-flex column-gap-8">
+              <div class="project-card">
+                <img class="supergas-logo" src="assets/images/svg/supergas-logo.svg">
+                <h3 class="font-title-md pb-12">Project marvel</h3>
+                <p class="project-desc font-body-sm">Customer success story implemented by SCM YUGA at DHL</p>
+                <div class="project-rate">
+                  <div class="success-card">
+                    <div class="d-flex column-gap-8 align-items-end">
+                      <h4 class="font-title-xl">40%</h4>
+                      <img class="arrow" src="assets/images/svg/arrow-up.svg">
+                    </div>
+                    <p class="success-order font-body-normal">Order execution</p>
+                  </div>
+                  <div class="failure-card ">
+                    <div class="d-flex column-gap-8 align-items-end">
+                      <h4 class="font-title-xl">05%</h4>
+                      <img class="arrow" src="assets/images/svg/arrow-down.svg">
+                    </div>
+                    <p class="success-order font-body-normal">Order execution</p>
+                  </div>
                 </div>
-                <div class="doctor-info">
-                  <h2 class="doctor-name font-title-xs font-color-white">Dr. Darshan Kumar</h2>
-                  <p class="qualifications font-body-sm">BPT, MPT</p>
-                  <p class="speciality font-body-md fw-normal asten-pt-12">Specialties: <span
-                      class="font-body-md fw-normal">Robotic
-                      Knee
-                      Surgery, External
-                      fixation</span></p>
-                  <button class="btn btn-secondary btn-sm asten-mt-32">Book now<span class="btn-elem-icon"> <img
-                        class="btn-elem-icon-img" src="./assets/images/svg/arrow-right-angle.svg"></span></button>
+                <div class="list-type d-flex column-gap-10 align-items-center pt-58 pb-20">
+                  <div class="list-img"><img class="list-svg" src="assets/images/svg/list.svg"></div>
+                  <h4 class="font-title-sm ">Type</h4>
+                </div>
+                <div class="lists">
+                  <ul class="list-items d-flex flex-wrap column-gap-12">
+                    <li class="list font-body-xs">Industry</li>
+                    <li class="list font-body-xs">Transportation</li>
+                    <li class="list font-body-xs">Supply chain</li>
+                  </ul>
                 </div>
               </div>
-            </div> -->
+              <div class="project-card-video" onclick="toggleVideo(event)">
+                <img class="video-img" src="assets/images/png/supergas-video-img.png" alt="Supergas" id="playBtn">
+                <div class="play-btn d-flex column-gap-12 align-items-center">
+                  <img class="play-svg" src="assets/images/svg/play.svg" alt="Play">
+                  <h4 class="font-body-sm font-weight-500 font-color-white">Play</h4>
+                </div>
+                <video id="project-video" class="project-video" data-video="1" controls loop>
+                  <source src="assets/videos/video-demo.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
           </div>
           <div class="item">
-            <!-- <div class="story-card fade-up">
-              <div class="doctor-card">
-                <div class="doctor-image">
-                  <img src="assets/images/png/doc-1.png" alt="Dr. Aadhya Kabir">
+            <div class="project-card-wrap d-flex column-gap-8">
+              <div class="project-card">
+                <img class="supergas-logo" src="assets/images/svg/supergas-logo.svg">
+                <h3 class="font-title-md pb-12">Project marvel</h3>
+                <p class="project-desc font-body-sm">Customer success story implemented by SCM YUGA at DHL</p>
+                <div class="project-rate">
+                  <div class="success-card">
+                    <div class="d-flex column-gap-8 align-items-end">
+                      <h4 class="font-title-xl">40%</h4>
+                      <img class="arrow" src="assets/images/svg/arrow-up.svg">
+                    </div>
+                    <p class="success-order font-body-normal">Order execution</p>
+                  </div>
+                  <div class="failure-card ">
+                    <div class="d-flex column-gap-8 align-items-end">
+                      <h4 class="font-title-xl">05%</h4>
+                      <img class="arrow" src="assets/images/svg/arrow-down.svg">
+                    </div>
+                    <p class="success-order font-body-normal">Order execution</p>
+                  </div>
                 </div>
-                <div class="doctor-info">
-                  <h2 class="doctor-name font-title-xs font-color-white">Dr. Darshan Kumar</h2>
-                  <p class="qualifications font-body-sm">BPT, MPT</p>
-                  <p class="speciality font-body-md fw-normal asten-pt-12">Specialties: <span
-                      class="font-body-md fw-normal">Robotic
-                      Knee
-                      Surgery, External
-                      fixation</span></p>
-                  <button class="btn btn-secondary btn-sm asten-mt-32">Book now<span class="btn-elem-icon"> <img
-                        class="btn-elem-icon-img" src="./assets/images/svg/arrow-right-angle.svg"></span></button>
+                <div class="list-type d-flex column-gap-10 align-items-center pt-58 pb-20">
+                  <div class="list-img"><img class="list-svg" src="assets/images/svg/list.svg"></div>
+                  <h4 class="font-title-sm ">Type</h4>
+                </div>
+                <div class="lists">
+                  <ul class="list-items d-flex flex-wrap column-gap-12">
+                    <li class="list font-body-xs">Industry</li>
+                    <li class="list font-body-xs">Transportation</li>
+                    <li class="list font-body-xs">Supply chain</li>
+                  </ul>
                 </div>
               </div>
-            </div> -->
+              <div class="project-card-video" onclick="toggleVideo(event)">
+                <img class="video-img" src="assets/images/png/supergas-video-img.png" alt="Supergas" id="playBtn">
+                <div class="play-btn d-flex column-gap-12 align-items-center">
+                  <img class="play-svg" src="assets/images/svg/play.svg" alt="Play">
+                  <h4 class="font-body-sm font-weight-500 font-color-white">Play</h4>
+                </div>
+                <video id="project-video" class="project-video" data-video="1" controls loop>
+                  <source src="assets/videos/video-demo.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
           </div>
           <div class="item">
-            <!-- <div class="story-card fade-up">
-              <div class="doctor-card">
-                <div class="doctor-image">
-                  <img src="assets/images/png/doc-1.png" alt="Dr. Aadhya Kabir">
+            <div class="project-card-wrap d-flex column-gap-8">
+              <div class="project-card">
+                <img class="supergas-logo" src="assets/images/svg/supergas-logo.svg">
+                <h3 class="font-title-md pb-12">Project marvel</h3>
+                <p class="project-desc font-body-sm">Customer success story implemented by SCM YUGA at DHL</p>
+                <div class="project-rate">
+                  <div class="success-card">
+                    <div class="d-flex column-gap-8 align-items-end">
+                      <h4 class="font-title-xl">40%</h4>
+                      <img class="arrow" src="assets/images/svg/arrow-up.svg">
+                    </div>
+                    <p class="success-order font-body-normal">Order execution</p>
+                  </div>
+                  <div class="failure-card ">
+                    <div class="d-flex column-gap-8 align-items-end">
+                      <h4 class="font-title-xl">05%</h4>
+                      <img class="arrow" src="assets/images/svg/arrow-down.svg">
+                    </div>
+                    <p class="success-order font-body-normal">Order execution</p>
+                  </div>
                 </div>
-                <div class="doctor-info">
-                  <h2 class="doctor-name font-title-xs font-color-white">Dr. Darshan Kumar</h2>
-                  <p class="qualifications font-body-sm">BPT, MPT</p>
-                  <p class="speciality font-body-md fw-normal asten-pt-12">Specialties: <span
-                      class="font-body-md fw-normal">Robotic
-                      Knee
-                      Surgery, External
-                      fixation</span></p>
-                  <button class="btn btn-secondary btn-sm asten-mt-32">Book now<span class="btn-elem-icon"> <img
-                        class="btn-elem-icon-img" src="./assets/images/svg/arrow-right-angle.svg"></span></button>
+                <div class="list-type d-flex column-gap-10 align-items-center pt-58 pb-20">
+                  <div class="list-img"><img class="list-svg" src="assets/images/svg/list.svg"></div>
+                  <h4 class="font-title-sm ">Type</h4>
+                </div>
+                <div class="lists">
+                  <ul class="list-items d-flex flex-wrap column-gap-12 row-gap-12">
+                    <li class="list font-body-xs">Industry</li>
+                    <li class="list font-body-xs">Transportation</li>
+                    <li class="list font-body-xs">Supply chain</li>
+                  </ul>
                 </div>
               </div>
-            </div> -->
+              <div class="project-card-video" onclick="toggleVideo(event)">
+                <img class="video-img" src="assets/images/png/supergas-video-img.png" alt="Supergas" id="playBtn">
+                <div class="play-btn d-flex column-gap-12 align-items-center">
+                  <img class="play-svg" src="assets/images/svg/play.svg" alt="Play">
+                  <h4 class="font-body-sm font-weight-500 font-color-white">Play</h4>
+                </div>
+                <video id="project-video" class="project-video" data-video="1" controls loop>
+                  <source src="assets/videos/video-demo.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
           </div>
           <div class="item">
-            <!-- <div class="story-card fade-up">
-              <div class="doctor-card">
-                <div class="doctor-image">
-                  <img src="assets/images/png/doc-1.png" alt="Dr. Aadhya Kabir">
+            <div class="project-card-wrap d-flex column-gap-8">
+              <div class="project-card">
+                <img class="supergas-logo" src="assets/images/svg/supergas-logo.svg">
+                <h3 class="font-title-md pb-12">Project marvel</h3>
+                <p class="project-desc font-body-sm">Customer success story implemented by SCM YUGA at DHL</p>
+                <div class="project-rate">
+                  <div class="success-card">
+                    <div class="d-flex column-gap-8 align-items-end">
+                      <h4 class="font-title-xl">40%</h4>
+                      <img class="arrow" src="assets/images/svg/arrow-up.svg">
+                    </div>
+                    <p class="success-order font-body-normal">Order execution</p>
+                  </div>
+                  <div class="failure-card ">
+                    <div class="d-flex column-gap-8 align-items-end">
+                      <h4 class="font-title-xl">05%</h4>
+                      <img class="arrow" src="assets/images/svg/arrow-down.svg">
+                    </div>
+                    <p class="success-order font-body-normal">Order execution</p>
+                  </div>
                 </div>
-                <div class="doctor-info">
-                  <h2 class="doctor-name font-title-xs font-color-white">Dr. Darshan Kumar</h2>
-                  <p class="qualifications font-body-sm">BPT, MPT</p>
-                  <p class="speciality font-body-md fw-normal asten-pt-12">Specialties: <span
-                      class="font-body-md fw-normal">Robotic
-                      Knee
-                      Surgery, External
-                      fixation</span></p>
-                  <button class="btn btn-secondary btn-sm asten-mt-32">Book now<span class="btn-elem-icon"> <img
-                        class="btn-elem-icon-img" src="./assets/images/svg/arrow-right-angle.svg"></span></button>
+                <div class="list-type d-flex column-gap-10 align-items-center pt-58 pb-20">
+                  <div class="list-img"><img class="list-svg" src="assets/images/svg/list.svg"></div>
+                  <h4 class="font-title-sm ">Type</h4>
+                </div>
+                <div class="lists">
+                  <ul class="list-items d-flex flex-wrap column-gap-12">
+                    <li class="list font-body-xs">Industry</li>
+                    <li class="list font-body-xs">Transportation</li>
+                    <li class="list font-body-xs">Supply chain</li>
+                  </ul>
                 </div>
               </div>
-            </div> -->
+              <div class="project-card-video" onclick="toggleVideo(event)">
+                <img class="video-img" src="assets/images/png/supergas-video-img.png" alt="Supergas" id="playBtn">
+                <div class="play-btn d-flex column-gap-12 align-items-center">
+                  <img class="play-svg" src="assets/images/svg/play.svg" alt="Play">
+                  <h4 class="font-body-sm font-weight-500 font-color-white">Play</h4>
+                </div>
+                <video id="project-video" class="project-video" data-video="1" controls loop>
+                  <source src="assets/videos/video-demo.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -358,6 +502,8 @@
     <script src="assets/js/jquery/jquery.min.js"></script>
     <script src="./assets/js/owl.carousel/owl.carousel.min.js"></script>
     <script src="./assets/js/custom/owl-carousel.js"></script>
+    <script src="./assets/js/custom/video.js"></script>
+    <script src="./assets/js/custom/dot.js"></script>
   </body>
 
 </html>
