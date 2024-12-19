@@ -34,6 +34,41 @@ $(document).ready(function () {
     onInitialized: adjustDots, // Custom function to adjust dots on initialization
     onChanged: adjustDots      // Custom function to adjust dots when slides change
   });
+  var owl = $("#related-topic").owlCarousel({
+    loop: false,
+    margin: 32,
+    nav: true,
+    dots: true,
+    responsiveClass: true,
+    stagePadding: 0,
+    responsive: {
+      0: {
+        items: 3,
+        stagePadding: 30,
+        margin: 25,
+      },
+      568: {
+        items: 1,
+        stagePadding: 50,
+        margin: 16,
+      },
+      768: {
+        stagePadding: 60,
+        items: 1,
+        margin: 16,
+      },
+      1200: {
+        stagePadding: 60,
+        items: 3,
+      },
+      1400: {
+        stagePadding: 110,
+        items: 3,
+      }
+    },
+    onInitialized: adjustDots, // Custom function to adjust dots on initialization
+    onChanged: adjustDots      // Custom function to adjust dots when slides change
+  });
 
   function adjustDots(event) {
     // Remove small-dot class from all dots initially
