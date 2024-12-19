@@ -54,9 +54,9 @@
 }
 
 .font-title-large {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 44px;
-  color: var(--primary);
+  color: var(--text-darkest-blue);
   line-height: 1.1;
   font-family: var(--font-family-secondary);
 
@@ -220,4 +220,8 @@
 
 .font-color-tertiary {
   color: var(--text-blue);
+}
+
+.font-color-primary-dark {
+  color: var(--text-primary-light);
 }

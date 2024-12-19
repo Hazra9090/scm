@@ -169,5 +169,121 @@
       cursor: pointer;
       display: block;
     }
+
+    .challenge-list {
+      list-style-type: decimal;
+      padding-left: 1.5rem;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(8);
+
+      li {
+        list-style: decimal;
+      }
+    }
+
+    .rate-wrap-sticky {
+      .rate-desc {
+        max-width: 103px;
+      }
+
+      .rate-desc-width {
+        max-width: 224px;
+      }
+    }
+  }
+
+  .image-container {
+    padding-bottom: rem(136);
+
+    .image-wrap {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(16);
+
+      @include mq(phone) {
+        grid-template-columns: 1fr;
+        gap: rem(8);
+      }
+
+      img {
+        border-radius: rem(6);
+        width: 100%;
+      }
+    }
+  }
+
+  .testimonial-sec {
+    background: var(--text-tertiary-dark);
+    padding-top: 136px;
+    padding-bottom: 122px;
+
+    .testimonial-title {
+      max-width: 846px;
+    }
+
+    .testimonial-description {
+      max-width: 860px;
+      padding-bottom: rem(64);
+    }
+
+    .testimonial-video-sec {
+      padding: rem(40);
+      border: 1px solid #FFFFFF26;
+    }
+
+    .testimonial-video-img {
+      width: 100%;
+      object-fit: cover;
+      cursor: pointer;
+      display: block;
+    }
+
+    .testimonial-video {
+      display: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    .card-video {
+      max-width: 584px;
+    }
+
+    .testimonial-content-sec {
+      padding: rem(40);
+      border: 1px solid #FFFFFF26;
+      border-left: 0;
+    }
+
+    .testimonial-content {
+      max-width: 496px;
+      padding-left: rem(40);
+    }
+
+    .quote-1 {
+      max-width: rem(30);
+      min-width: rem(30);
+    }
+
+    .quote-2 {
+      max-width: rem(30);
+      min-width: rem(30);
+      position: relative;
+      right: -280px;
+    }
+
+    .testimonial-symbol {
+      max-width: rem(32);
+      min-width: rem(32);
+    }
+
+    .blog-author-details {
+      padding-top: 0;
+    }
+  }
+
+  .testimonial-carousel {
+    position: relative;
   }
 }

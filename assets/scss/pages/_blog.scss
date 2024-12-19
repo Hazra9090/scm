@@ -69,23 +69,7 @@
         margin-bottom: rem(12);
       }
 
-      .blog-author-details {
-        padding-top: rem(24);
-        display: flex;
-        gap: rem(16);
 
-        .blog-author-pic {
-          min-width: 40px;
-          max-width: 40px;
-          height: 40px;
-          border-radius: 100%;
-        }
-
-        .blog-details {
-          display: flex;
-          gap: rem(10);
-        }
-      }
     }
   }
 
@@ -123,5 +107,23 @@
         }
       }
     }
+  }
+}
+
+.blog-author-details {
+  padding-top: rem(24);
+  display: flex;
+  gap: rem(16);
+
+  .blog-author-pic {
+    min-width: 40px;
+    max-width: 40px;
+    height: 40px;
+    border-radius: 100%;
+  }
+
+  .blog-details {
+    display: flex;
+    gap: rem(10);
   }
 }
