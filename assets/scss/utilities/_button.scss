@@ -6,10 +6,8 @@
 	--btn-font-weight: 500;
 	--btn-padding: 16px 20px;
 	--btn-border: transparent;
-	--btn-text-margin-right: 6px;
+	--btn-text-margin-right: 6px; // Margin for default spacing
 	--btn-icon-width: 16px;
-	--btn-text-translate-x: 20px;
-	--btn-icon-translate-x: -80px;
 	--transition-duration-short: 0.3s;
 	--transition-duration-long: 0.8s;
 }
@@ -20,40 +18,38 @@
 	border: var(--btn-border);
 	cursor: pointer;
 	text-decoration: none;
-	background: transparent;
+	background: var(--btn-bg-color);
 	border-radius: 6px;
-	transition: transform var(--transition-duration-short) ease;
+	padding: var(--btn-padding);
 	font-family: $base-font-family;
+	font-size: var(--btn-font-size);
+	font-weight: var(--btn-font-weight);
+	color: var(--btn-font-color);
+	position: relative;
 
-	&-primary {
-		background-color: var(--btn-bg-color);
-		color: var(--btn-font-color);
-		padding: var(--btn-padding);
-		font-size: var(--btn-font-size);
-		font-weight: var(--btn-font-weight);
-
-		&:hover {
-			.btn-text {
-				transform: translateX(var(--btn-text-translate-x));
-			}
-
-			.btn-icon {
-				transform: translateX(var(--btn-icon-translate-x));
-			}
-		}
-	}
-
-	&-text {
-		margin-right: var(--btn-text-margin-right);
+	.btn-text {
+		margin-right: var(--btn-text-margin-right); // Spacing between text and icon
 		transition: transform var(--transition-duration-long) ease;
 	}
 
-	&-icon {
+	.btn-icon {
 		transition: transform var(--transition-duration-long) ease;
+		position: relative;
 
 		img {
 			width: var(--btn-icon-width);
 			height: auto;
+		}
+	}
+
+	&:hover {
+		.btn-text {
+			transform: translateX(0); // Text stays in place
+		}
+
+		.btn-icon {
+			// Dynamically move to the left by the combined width of the text and margin
+			transform: translateX(calc(-1 * (100% + var(--btn-text-margin-right))));
 		}
 	}
 }

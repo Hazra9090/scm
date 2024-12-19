@@ -1,3 +1,9 @@
+.success-sub-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+}
+
 .blog-listing {
   padding-top: rem(88);
 
@@ -14,15 +20,28 @@
   .blog-banner-desc {
     min-width: 547px;
     max-width: 547px;
+
+    @include mq(phone) {
+      min-width: 100%;
+      max-width: 100%;
+    }
   }
 
   .featured-blog-area {
     padding-top: rem(40);
     padding-bottom: rem(88);
 
+    @include mq(phone) {
+      padding-bottom: rem(20);
+    }
+
     .live-blog {
       display: flex;
       padding-top: rem(32);
+
+      @include mq(phone) {
+        flex-direction: column;
+      }
 
       .related-blog {
         min-width: 462px;
@@ -30,6 +49,13 @@
         border-radius: 8px;
         background-color: #F1F6F9;
         padding: rem(40);
+
+        @include mq(phone) {
+          min-width: 100%;
+          max-width: 100%;
+          margin-top: rem(20);
+          padding: rem(20);
+        }
 
         .blog-list {
           padding-top: rem(32);
@@ -47,10 +73,7 @@
 
 
 
-          .blog-details {
-            display: flex;
-            gap: rem(10);
-          }
+
         }
       }
 
@@ -61,18 +84,31 @@
     }
   }
 
-  .current-blog {
-    .blog-data {
-      padding-top: rem(24);
+  .blog-list-view {
+    position: absolute;
+    bottom: rem(24);
+    left: rem(24);
+  }
 
-      .blog-tag {
-        margin-bottom: rem(12);
-      }
+  .blog-details {
+    display: flex;
+    gap: rem(10);
+  }
 
-      .blog-author-details {
+  .blog-author-details {
+    padding-top: rem(24);
+    display: flex;
+    gap: rem(16);
+
+    .current-blog {
+      .blog-data {
         padding-top: rem(24);
-        display: flex;
-        gap: rem(16);
+
+        .blog-tag {
+          margin-bottom: rem(12);
+        }
+
+
 
         .blog-author-pic {
           min-width: 40px;
@@ -93,9 +129,17 @@
     padding-top: rem(136);
     padding-bottom: rem(136);
 
+    @include mq(phone) {
+      padding-top: rem(50);
+    }
+
     .listing-head {
       display: flex;
       justify-content: space-between;
+
+      @include mq(phone) {
+        flex-direction: column;
+      }
 
       .seacrh-area {
         border: 1px solid #9DB2C3;
@@ -104,6 +148,12 @@
         max-width: 480px;
         height: 52px;
         position: relative;
+
+        @include mq(phone) {
+          min-width: 100%;
+          max-width: 100%;
+          margin-top: rem(20);
+        }
 
         img {
           position: absolute;
@@ -122,6 +172,74 @@
           font-weight: 400;
         }
       }
+    }
+  }
+}
+
+.listing-banner {
+  min-width: 904px;
+  max-width: 904px;
+}
+
+.blog-connect-area {
+  padding-top: rem(40);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .author-social-media {
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+
+    .media-box {
+      min-width: 40px;
+      max-width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      border-radius: 20px;
+      border: 1px solid #CDD8E1;
+    }
+  }
+}
+
+.blog-detail-banner-area {
+  padding-top: rem(48);
+}
+
+.blog-detail-content {
+  padding-top: rem(96);
+  padding-bottom: rem(136);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #050708;
+    font-size: 34px;
+    font-weight: 500;
+    padding-bottom: rem(20);
+
+  }
+
+  p {
+    color: #050708;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    padding-bottom: rem(32);
+  }
+
+  .middle-imaga-area {
+    padding-top: rem(48);
+
+    img {
+      padding-bottom: rem(16);
     }
   }
 }
