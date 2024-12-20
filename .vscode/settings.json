@@ -1,0 +1,45 @@
+{
+	"editor.suggestSelection": "first",
+	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+	"git.ignoreMissingGitWarning": true,
+	"[scss]": {
+		"editor.defaultFormatter": "vscode.css-language-features"
+	},
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"liveSassCompile.settings.formats": [
+		{
+			"format": "compressed",
+			"extensionName": ".min.css",
+			"savePath": "/assets/css"
+		}
+	],
+	"liveSassCompile.settings.autoprefix": [
+		"defaults",
+		"IE 10"
+	],
+	"liveSassCompile.settings.excludeList": [
+		"/bootstrap/",
+		"/node_modules/",
+		"/.vscode/"
+	],
+	"editor.codeActionsOnSave": {
+		"source.fixAll": "never"
+	},
+	"editor.formatOnSave": true,
+	"editor.tabSize": 2,
+	"html.format.indentInnerHtml": true,
+	"editor.wordWrap": "on",
+	"html-css-class-completion.JavaScriptLanguages": [
+		"javascript",
+		"javascriptreact",
+		"typescriptreact"
+	],
+}

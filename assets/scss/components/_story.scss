@@ -1,0 +1,118 @@
+.story-card-wrapper,
+.youtube-card-wrapper {
+  position: relative;
+
+  .owl-stage {
+    display: flex;
+    padding-left: calc((100% - 1388px) / 2) !important;
+
+    @media (max-width: 1388px) {
+      padding-left: 60px !important;
+    }
+
+    @include mq(tablet) {
+      padding-left: 30px !important;
+    }
+
+    @include mq(phone) {
+      padding-left: 20px !important;
+    }
+  }
+
+  .story-card {
+    width: 100%;
+    cursor: pointer;
+    z-index: 9999;
+    transition: transform 1.1s ease, border 1.1s ease;
+    border: 2px solid transparent;
+    // min-width: 257px;
+
+    &:hover {
+      position: absolute;
+      transform: translateY(-10px);
+      border: 2px solid transparent;
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+      border-radius: 18px;
+      background-image: linear-gradient(white, white), linear-gradient(252.38deg, #CEDD45 0%, #63C18E 50%, #00AEEF 100%);
+
+      @include mq(phone) {
+        transform: translateY(-4px);
+
+      }
+
+      .arrow-card {
+        transition: transform 0.4s ease-in-out;
+        transform: translate(10px, -0px) rotate(45deg);
+      }
+
+      .btn {
+        background-color: var(--btn-hover-bg-clr);
+        color: var(--btn-hover-font-clr);
+        border-color: var(--btn-hover-border-clr);
+
+        &::before {
+          width: calc(100% + 0px);
+          right: 0;
+          aspect-ratio: 1 / .5;
+        }
+
+        .btn-elem-icon {
+          transform: var(--btn-elem-icon-rotation);
+        }
+      }
+    }
+
+    .story-card-img {
+      .story-card-image {
+        object-fit: cover;
+        border-radius: 12px;
+      }
+    }
+
+    .arrow-card {
+      transition: transform 0.3s ease-in-out;
+    }
+
+
+    .story-card-img {
+      .story-card-image {
+
+        object-fit: cover;
+        border-radius: rem(12);
+      }
+    }
+  }
+
+  .story-card-content {
+    position: absolute;
+    top: rem(32);
+    left: rem(32);
+    right: rem(32);
+    padding: rem(10);
+
+    @include mq(desktop-sm) {
+      top: rem(24);
+      left: rem(24);
+      right: rem(24);
+      padding: 0;
+    }
+  }
+
+  .card-title-01 {
+    max-width: rem(257);
+  }
+
+  .card-title-02 {
+    max-width: rem(250);
+  }
+
+  .card-title-03 {
+    max-width: rem(263);
+  }
+
+  .card-title-04 {
+    max-width: rem(245);
+  }
+
+}

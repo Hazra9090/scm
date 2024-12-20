@@ -1,0 +1,129 @@
+.blog-listing {
+  padding-top: rem(88);
+
+  .blog-tag {
+    background-color: #0507080F;
+    padding: rem(8) rem(12);
+    border-radius: rem(100);
+    color: #050708;
+    font-size: 14px;
+    font-weight: 500;
+    width: fit-content;
+  }
+
+  .blog-banner-desc {
+    min-width: 547px;
+    max-width: 547px;
+  }
+
+  .featured-blog-area {
+    padding-top: rem(40);
+    padding-bottom: rem(88);
+
+    .live-blog {
+      display: flex;
+      padding-top: rem(32);
+
+      .related-blog {
+        min-width: 462px;
+        max-width: 462px;
+        border-radius: 8px;
+        background-color: #F1F6F9;
+        padding: rem(40);
+
+        .blog-list {
+          padding-top: rem(32);
+
+          li {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: rem(40);
+            gap: rem(16);
+
+            &:last-child {
+              padding-bottom: 0;
+            }
+          }
+
+
+
+          .blog-details {
+            display: flex;
+            gap: rem(10);
+          }
+        }
+      }
+
+      .current-blog {
+        flex: 1 1 auto;
+        margin-right: rem(40);
+      }
+    }
+  }
+
+  .current-blog {
+    .blog-data {
+      padding-top: rem(24);
+
+      .blog-tag {
+        margin-bottom: rem(12);
+      }
+
+
+    }
+  }
+
+  .more-blogs {
+    padding-top: rem(136);
+    padding-bottom: rem(136);
+
+    .listing-head {
+      display: flex;
+      justify-content: space-between;
+
+      .seacrh-area {
+        border: 1px solid #9DB2C3;
+        border-radius: 8px;
+        min-width: 480px;
+        max-width: 480px;
+        height: 52px;
+        position: relative;
+
+        img {
+          position: absolute;
+          left: 20px;
+          top: 16px;
+        }
+
+        input {
+          border: none;
+          width: 100%;
+          padding-left: rem(48);
+          height: 100%;
+          border-radius: 8px;
+          color: #667085;
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+.blog-author-details {
+  padding-top: rem(24);
+  display: flex;
+  gap: rem(16);
+
+  .blog-author-pic {
+    min-width: 40px;
+    max-width: 40px;
+    height: 40px;
+    border-radius: 100%;
+  }
+
+  .blog-details {
+    display: flex;
+    gap: rem(10);
+  }
+}

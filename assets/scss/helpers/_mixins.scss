@@ -1,0 +1,35 @@
+// fontsize rem conversion
+@mixin fz($sizeValue: 1.6) {
+	font-size: ($sizeValue * 10) + px;
+	font-size: $sizeValue + rem;
+}
+
+// Ellipsis
+@mixin truncate($line: 1, $truncation-boundary: 100%) {
+	max-width: $truncation-boundary;
+	min-width: 0;
+	-webkit-line-clamp: $line;
+	-webkit-box-orient: vertical;
+
+	@if $line ==1 {
+		white-space: nowrap;
+	}
+
+	@else {
+		display: -webkit-box;
+		white-space: normal;
+	}
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@mixin custom-scroll {
+	scrollbar-color: light;
+	scrollbar-width: thin;
+	scrollbar-color: #fff transparent;
+}
+
+.custom-scroll {
+	@include custom-scroll;
+}

@@ -1,0 +1,76 @@
+$colors: (
+  --white: $white,
+  --black: $black,
+
+  // Main
+  --primary: #002B47,
+  --secondary: #FFCE32,
+
+  // Text
+  --text-primary-light: #A6ABB0,
+  --text-primary: #E7E9EB,
+  --text-primary-dark:#B4BDC3,
+  --text-secondary-light: #93A1AA,
+  --text-secondary: #6F838F,
+  --text-secondary-dark:#4C606C,
+  --text-tertiary-light: #42545E,
+  --text-tertiary: #2C3C43,
+  --text-tertiary-dark:#050708,
+  --text-blue: #2F4E62,
+  --text-blue-dark:#213643,
+  --text-green:#149944,
+  --text-red:#C95353,
+  --text-light-grey:#CDD8E1,
+  --text-darkest-blue:#142129,
+  // --text-primary-disabled: #626262,
+
+  // // Background
+  --bg-primary: #F7FAFD,
+  --bg-primary-dark:#F2F6F9,
+  --bg-secondary:#0507080F,
+  --bg-tertiary:#F1F6F9,
+  --bg-yellow: #F5BA00,
+  // --bg-tertiary-hover: #2C2E39,
+
+  // --bg-block-primary: #7CC6C9,
+  // --bg-block-secondary: #383B45,
+  // --bg-block-light-on-dark: #292A33,
+
+  // // Link
+  // --link-primary: #ED7D31,
+  // --link-secondary: #848589,
+
+  // // System
+  // --system-success: #43B498,
+  // --system-error: #FD7580,
+
+  // // Badge
+  // --badge-bg-primary: #ED7D31,
+  // --badge-bg-secondary: #65DBDF,
+
+  // Border
+  --border-primary: #667F93,
+  --border-secondary: #D0DADF,
+  --border-tertiary: #D8DDDF,
+  // // Interactive others
+  // --Interactive-primary-hover: #64C4D1,
+
+  // // Icon
+  // --icon-primary: #64C4D1,
+  // --icon-on-secondary: #E7E9ED,
+  // --icon-on-hover: #292A33,
+);
+
+// generating root HEX, RGB variants variables
+:root {
+  &[data-theme="theme-light"] {
+
+    @each $color,
+    $value in $colors {
+      #{$color}: #{$value};
+      #{$color}-rgb: #{red($value)},
+      #{green($value)},
+      #{blue($value)};
+    }
+  }
+}
