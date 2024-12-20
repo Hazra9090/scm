@@ -119,10 +119,15 @@
     max-width: rem(32);
   }
 
-  .card-main-img {
+  .card-image {
     padding: rem(8);
-    border-radius: rem(4);
+
+  }
+
+  .card-main-img {
+    overflow: hidden;
     width: 100%;
+    border-radius: rem(4);
 
     @include mq(phone-sm) {
       border-radius: rem(8);
