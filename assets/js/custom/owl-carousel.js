@@ -43,7 +43,7 @@ $(document).ready(function () {
     stagePadding: 0,
     responsive: {
       0: {
-        items: 3,
+        items: 1,
         stagePadding: 30,
         margin: 25,
       },

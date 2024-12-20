@@ -179,6 +179,11 @@
 .listing-banner {
   min-width: 904px;
   max-width: 904px;
+
+  @include mq(phone) {
+    min-width: 100%;
+    max-width: 100%;
+  }
 }
 
 .blog-connect-area {
@@ -186,6 +191,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include mq(phone) {
+    flex-direction: column;
+  }
 
   .author-social-media {
     display: flex;
