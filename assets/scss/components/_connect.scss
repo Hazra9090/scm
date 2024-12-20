@@ -10,15 +10,25 @@
     padding: rem(20);
     transition: transform 0.8s ease, background-color 0.8s ease, box-shadow 0.8s ease;
 
+    @include mq(phone) {
+      padding: rem(15);
+    }
+
     .phone {
       max-width: rem(24);
       min-width: rem(24);
+
+      @include mq(phone) {
+        max-width: rem(18);
+        min-width: rem(18);
+      }
     }
   }
 
   .icon-text {
     position: relative;
     transition: all 0.5s ease-in-out;
+    text-align: start;
 
     &::after {
       content: "";

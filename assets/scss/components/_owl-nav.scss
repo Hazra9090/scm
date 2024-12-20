@@ -61,3 +61,22 @@
     width: 100%;
   }
 }
+
+.testimonial-carousel {
+  .owl-nav {
+    top: -104px;
+    right: 115px;
+
+    @include mq(desktop-lg) {
+      right: 56px
+    }
+
+    @include mq(phone) {
+      top: unset;
+      right: unset;
+      bottom: -58px;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+}

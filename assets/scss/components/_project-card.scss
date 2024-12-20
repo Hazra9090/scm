@@ -2,6 +2,10 @@
   position: relative;
   padding-top: rem(40);
 
+  @include mq(phone) {
+    padding-top: rem(32);
+  }
+
   .item {
     height: 100%;
   }

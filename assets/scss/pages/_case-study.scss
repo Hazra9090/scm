@@ -5,6 +5,10 @@
   .success-sec {
     padding: 88px 0 104px 0;
     background: var(--bg-primary);
+
+    @include mq(phone) {
+      padding: rem(32) 0 rem(112) 0;
+    }
   }
 
 
@@ -19,6 +23,10 @@
 
 .success-title {
   max-width: 1080px;
+
+  @include mq(phone) {
+    max-width: 100%;
+  }
 }
 
 .success-description {
@@ -27,10 +35,23 @@
   @include mq(desktop-sm) {
     padding-right: 13%;
   }
+
+  @include mq(phone) {
+    padding-right: 0;
+    max-width: 100%;
+  }
 }
 
 .case-study-sec {
   padding: 136px 0;
+
+  @include mq(tablet) {
+    padding: rem(60) 0;
+  }
+
+  @include mq(phone) {
+    padding: rem(48) 0;
+  }
 
 }
 
@@ -45,8 +66,12 @@
   padding-top: rem(63);
 
   @include mq(tablet) {
-    gap: rem(12);
+    gap: rem(20);
     grid-template-columns: 1fr 1fr;
+  }
+
+  @include mq(phone) {
+    padding-top: rem(24);
   }
 
   @include mq(phone-sm) {
@@ -66,7 +91,7 @@
     padding: rem(32) rem(24) rem(24);
 
     @include mq(phone) {
-      padding: rem(28) rem(16) rem(16);
+      padding: rem(20) rem(16) rem(16);
     }
   }
 
@@ -131,7 +156,19 @@
   padding: 104px 0;
   background: var(--bg-primary);
 
+  @include mq(phone) {
+    padding: rem(56) 0;
+  }
+
   .connect-title {
     max-width: 980px;
+  }
+
+  .btn-secondary {
+    margin-top: rem(32);
+
+    @include mq(phone) {
+      margin-top: rem(104);
+    }
   }
 }

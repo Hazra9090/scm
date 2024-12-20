@@ -1,83 +1,69 @@
-// padding & margin reset values
-.p-0 {
-  padding: 0 !important;
-}
+$spacingBp: (
+  sm: phone-sm,
+  md: phone,
+  lg: tablet,
+);
 
-.m-0 {
-  margin: 0 !important;
-}
+$spacingValues: (
+  p: 'padding',
+  pt: 'padding-top',
+  pr: 'padding-right',
+  pb: 'padding-bottom',
+  pl: 'padding-left',
+  m: 'margin',
+  mt: 'margin-top',
+  mr: 'margin-right',
+  mb: 'margin-bottom',
+  ml: 'margin-left',
+  column-gap: 'column-gap',
+  row-gap: 'row-gap',
+);
 
-// This mixin generates CSS padding classes for different padding values.
-// Usage example: @include padding(0, 4, 8, 12, 16);
-@mixin padding($values...) {
+// This mixin generates CSS classes for padding and margin values
+@mixin generateClasses($className, $breakPointName, $property, $values...) {
   @each $value in $values {
-    .pt-#{$value} {
-      padding-top: #{if($value == 0, 0, $value + 'px')} !important;
+    @if $breakPointName !='' {
+
+      // Generate CSS classes for padding and margin values with breakpoint
+      .#{$className}-#{$breakPointName}-#{$value} {
+        // #{$property}: #{if($value == 0, 0, $value + "px")} !important;
+        #{$property}: rem($value) !important;
+      }
     }
 
-    .pr-#{$value} {
-      padding-right: #{if($value == 0, 0, $value + 'px')} !important;
-    }
+    @else {
 
-    .pb-#{$value} {
-      padding-bottom: #{if($value == 0, 0, $value + 'px')} !important;
-    }
-
-    .pl-#{$value} {
-      padding-left: #{if($value == 0, 0, $value + 'px')} !important;
+      // Generate CSS classes for padding and margin values without breakpoint
+      .#{$className}-#{$value} {
+        // #{$property}: #{if($value == 0, 0, $value + "px")} !important;
+        #{$property}: rem($value) !important;
+      }
     }
   }
 }
 
-// This mixin generates CSS margin classes for different margin values.
-// Usage example: @include margin(0, 4, 8, 12, 16);
-@mixin margin($values...) {
-  @each $value in $values {
-    .mt-#{$value} {
-      margin-top: #{if($value == 0, 0, $value + 'px')} !important;
-    }
-
-    .mr-#{$value} {
-      margin-right: #{if($value == 0, 0, $value + 'px')} !important;
-    }
-
-    .mb-#{$value} {
-      margin-bottom: #{if($value == 0, 0, $value + 'px')} !important;
-    }
-
-    .ml-#{$value} {
-      margin-left: #{if($value == 0, 0, $value + 'px')} !important;
-    }
-  }
+// Generate classes for spacing values without breakpoints
+@each $key, $value in $spacingValues {
+  @include generateClasses($key, '', $value, 0, 2, 4, 8, 10, 12, 15, 16, 18, 20, 24, 26, 28, 30, 32, 34, 36, 38, 40, 48, 52, 54, 58);
 }
 
-// This mixin generates CSS column gap classes for different column gap values.
-// Usage example: @include columnGap(0, 4, 8, 12, 16);
-@mixin columnGap($values...) {
-  @each $value in $values {
-    .column-gap-#{$value} {
-      column-gap: #{if($value == 0, 0, $value + 'px')} !important;
-    }
-  }
-}
-
-// This mixin generates CSS row gap classes for different row gap values.
-// Usage example: @include rowGap(0, 4, 8, 12, 16);
-@mixin rowGap($values...) {
-  @each $value in $values {
-    .row-gap-#{$value} {
-      row-gap: #{if($value == 0, 0, $value + 'px')} !important;
-    }
-  }
+// Margin auto values
+.m-auto {
+  margin: auto !important;
 }
 
 
-$values: 0, 2, 4, 8, 10, 12, 15, 16, 18, 20, 24, 26, 28, 30, 32, 34, 36, 38, 40, 48, 52, 54, 58;
+// Generate responsive spacings for each breakpoint and device
+@each $breakpoint, $device in $spacingBp {
 
-@include columnGap($values...);
-@include rowGap($values...);
-@include padding($values...);
-@include margin($values...);
+  @include mq($device, min) {
+
+    // Generate classes for spacing values with breakpoints
+    @each $key, $value in $spacingValues {
+      @include generateClasses($key, $breakpoint, $value, 0, 2, 4, 8, 10, 12, 15, 16, 18, 20, 24, 26, 28, 30, 32, 34, 36, 38, 40, 48, 52, 54, 58);
+    }
+  }
+}
 
 // margin auto values
 .mt-auto {

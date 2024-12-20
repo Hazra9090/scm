@@ -48,8 +48,12 @@
   line-height: 1.1;
   font-family: var(--font-family-secondary);
 
+  @include mq(tablet) {
+    font-size: 30px;
+  }
+
   @include mq(phone) {
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 
@@ -60,8 +64,12 @@
   line-height: 1.1;
   font-family: var(--font-family-secondary);
 
+  @include mq(tablet) {
+    font-size: 38px;
+  }
+
   @include mq(phone) {
-    font-size: 34px;
+    font-size: 28px;
   }
 }
 
@@ -72,6 +80,10 @@
   line-height: 1.1;
   letter-spacing: -1px;
   font-family: var(--font-family-secondary);
+
+  @include mq(tablet) {
+    font-size: 40px;
+  }
 
   @include mq(phone) {
     font-size: 34px;
@@ -85,6 +97,10 @@
   line-height: 1.1;
   letter-spacing: -1px;
   font-family: var(--font-family-secondary);
+
+  @include mq(tablet) {
+    font-size: 50px;
+  }
 
   @include mq(phone) {
     font-size: 44px;
@@ -114,31 +130,31 @@
   color: var(--text-blue);
   line-height: 1.5;
 
-  @include mq(phone) {
-    font-size: 16px;
-  }
+  // @include mq(phone) {
+  //   font-size: 16px;
+  // }
 }
 
 .font-body-md {
   font-weight: 500;
   font-size: 20px;
-  color: var(--primary);
+  color: var(--text-tertiary-light);
   line-height: 1.5;
 }
 
 .font-body-large {
   font-weight: 500;
   font-size: 24px;
-  color: var(--primary);
+  color: var(--text-tertiary-light);
   line-height: 1.5;
 }
 
-.font-body-xl {
-  font-weight: 500;
-  font-size: 39px;
-  color: var(--primary);
-  line-height: 1.5;
-}
+// .font-body-xl {
+//   font-weight: 500;
+//   font-size: 39px;
+//   color: var(--primary);
+//   line-height: 1.5;
+// }
 
 
 // .link-primary {

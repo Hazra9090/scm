@@ -65,16 +65,16 @@ $(document).ready(function () {
     responsive: {
       0: {
         items: 1,
-        stagePadding: 30,
-        margin: 16,
+        // margin: 16,
+        stagePadding: 20,
       },
       568: {
         items: 1,
-        stagePadding: 50,
-        margin: 16,
+        // margin: 16,
+        stagePadding: 20,
       },
       768: {
-        stagePadding: 60,
+        stagePadding: 40,
         items: 1,
         margin: 16,
       },
@@ -83,7 +83,7 @@ $(document).ready(function () {
         items: 1,
       },
       1400: {
-        stagePadding: 110,
+        stagePadding: 65,
         items: 1,
       }
     },
@@ -108,5 +108,7 @@ $(document).ready(function () {
     }
   }
 });
+
+
 
 
