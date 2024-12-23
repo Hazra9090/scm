@@ -82,6 +82,9 @@
 .card {
   background: var(--bg-tertiary);
   border-radius: rem(8);
+  position: relative;
+  min-height: 509px;
+  max-height: 509px;
 
   @include mq(phone-sm) {
     border-radius: rem(16);
