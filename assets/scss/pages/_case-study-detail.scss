@@ -283,7 +283,7 @@
 
     @include mq(phone) {
       grid-template-columns: 1fr;
-      gap: rem(8);
+      gap: rem(23);
     }
 
     img {
