@@ -194,6 +194,8 @@
 
   @include mq(phone) {
     flex-direction: column;
+    align-items: start;
+    gap: rem(30);
   }
 
   .author-social-media {
