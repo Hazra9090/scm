@@ -3,6 +3,14 @@
   display: flex;
   column-gap: rem(16);
   transition: all 0.5s ease-in-out;
+  background: transparent;
+  align-items: center;
+  justify-content: center;
+  color: #050708;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
 
   .btn-icon-img {
     background: var(--secondary);
